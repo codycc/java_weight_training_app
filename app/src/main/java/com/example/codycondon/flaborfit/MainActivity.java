@@ -1,6 +1,7 @@
 package com.example.codycondon.flaborfit;
 
 import android.content.Intent;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,15 +13,21 @@ public class MainActivity extends AppCompatActivity {
     public static final String EXERCISE_YOGA = "Yoga";
     public static final String EXERCISE_CARDIO = "Cardio";
 
+
+    public RelativeLayout weightBtn;
+    public RelativeLayout yogaBtn;
+    public RelativeLayout cardioBtn;
+    public RelativeLayout gearBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        RelativeLayout weightBtn = (RelativeLayout)findViewById(R.id.weightBtn);
-        RelativeLayout yogaBtn = (RelativeLayout)findViewById(R.id.yogaBtn);
-        RelativeLayout cardioBtn = (RelativeLayout)findViewById(R.id.cardioBtn);
-        RelativeLayout gearBtn = (RelativeLayout)findViewById(R.id.gearBtn);
+        weightBtn = (RelativeLayout)findViewById(R.id.weightBtn);
+        yogaBtn = (RelativeLayout)findViewById(R.id.yogaBtn);
+        cardioBtn = (RelativeLayout)findViewById(R.id.cardioBtn);
+        gearBtn = (RelativeLayout)findViewById(R.id.gearBtn);
 
         weightBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,10 +66,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void loadSettingsActivity() {
-        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-        MainActivity.this.startActivity(intent);
+        Intent intent2 = new Intent(MainActivity.this, SettingsActivity.class);
+        startActivity(intent2);
 
     }
+
 
 
 }

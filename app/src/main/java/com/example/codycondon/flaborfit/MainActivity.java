@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         RelativeLayout weightBtn = (RelativeLayout)findViewById(R.id.weightBtn);
         RelativeLayout yogaBtn = (RelativeLayout)findViewById(R.id.yogaBtn);
         RelativeLayout cardioBtn = (RelativeLayout)findViewById(R.id.cardioBtn);
-
+        RelativeLayout gearBtn = (RelativeLayout)findViewById(R.id.gearBtn);
 
         weightBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
                 loadDetailActivity(MainActivity.EXERCISE_CARDIO);
             }
         });
+
+        gearBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loadSettingsActivity();
+            }
+        });
     }
 
     private void loadDetailActivity(String exerciseTitle) {
@@ -50,4 +57,12 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(MainActivity.EXTRA_ITEM_TITLE, exerciseTitle);
         startActivity(intent);
     }
+
+    public void loadSettingsActivity() {
+        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+        MainActivity.this.startActivity(intent);
+
+    }
+
+
 }

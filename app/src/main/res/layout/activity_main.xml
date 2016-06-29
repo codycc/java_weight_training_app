@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/rounded_corners"
         android:backgroundTint="#2ca5f5"
-        android:layout_weight="1"
+        android:layout_weight="4"
         android:layout_marginBottom="5dp"
         android:id="@+id/weightBtn">
 
@@ -79,6 +79,7 @@
             android:background="@drawable/rounded_corners"
             android:backgroundTint="#20000000"
             android:textColor="#ffffff" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -86,7 +87,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/rounded_corners"
         android:backgroundTint="#916bcd"
-        android:layout_weight="1"
+        android:layout_weight="4"
         android:id="@+id/yogaBtn">
 
         <ImageView
@@ -156,7 +157,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/rounded_corners"
         android:backgroundTint="#52ad56"
-        android:layout_weight="1"
+        android:layout_weight="4"
         android:layout_marginTop="5dp"
         android:id="@+id/cardioBtn">
 
@@ -220,6 +221,23 @@
             android:background="@drawable/rounded_corners"
             android:backgroundTint="#20000000"
             android:textColor="#ffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="#a3a3a3"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:id="@+id/gearBtn">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:id="@+id/imageView4"
+            android:src="@drawable/gearicon" />
     </RelativeLayout>
 
 </LinearLayout>
